@@ -21,3 +21,5 @@ Users should be able to:
 - The submit button should be disabled if there is not content in every input field.
 - The submit button should be enabled if there is valid content in the input fields.
 - Add a button that appears when the name is generated that when clicked clears the display, input fields and resets the name generator.
+
+### Screen Shots before / after
