@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  color: #391712;
+  font-family: 'Bitter', serif;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(48, [col-start] 1fr);
+  grid-template-rows: repeat(16, 47px);
+}
+
+h1 {
+  padding-right: 28px;
+}
+
+input:focus {
+  outline: none;
+}
+
+label {
+  display: inline-block;
+  text-align: left;
+  width: 25%;
+}
+
+div {
+  background: #eeeeee;
+  border-bottom: thick double #7FA6A9;
+  border-right: thick double #7FA6A9;
+}
+
+fieldset {
+  border: none;
+  margin: 10px 0 0 90px;
+  padding: 0;
+}
+
+input {
+  border: none;
+  color: #616161;
+  font-family: 'Bitter', serif;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+  width: 83%;
+}
+
+header {
+  font-size: 26px;
+  grid-column: 1 / span 47;
+  text-align: center;
+}
+
+.name-form {
+  grid-column: 2 / span 21;
+  grid-row: 3 / span 7;
+}
+
+.generated-display {
+  grid-column: 25 / span 21;
+  grid-row: 3 / span 7;
+}
+
+.submit-btn:hover {
+  background: #aaa;
+  cursor: pointer;
+}
+
+.submit-btn {
+  border-radius: 28px;
+  font-size: 25px;
+  height: 50px;
+  margin: 30px 0 0 87px;
+  outline-style: none;
+  width: 70%;
+}
+
+.generated-name li {
+  list-style: none;
+  padding: 10px;
+}
+
+.clear-btn {
+  border-radius: 28px;
+  font-size: 25px;
+  height: 50px;
+  margin: 195px 0 0 87px;
+  outline-style: none;
+  width: 70%;
+}
+
+.clear-btn:hover {
+  background: #aaa;
+  cursor: pointer;
+}
