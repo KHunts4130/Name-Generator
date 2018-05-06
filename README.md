@@ -25,5 +25,4 @@ Users should be able to:
 ### Screen Shots before / after
 
 <img width="1434" alt="name-generator-before" src="https://user-images.githubusercontent.com/31703511/39668993-664589f8-509c-11e8-840f-b2a22f5c6989.png">
-
 <img width="1431" alt="name-generator-after" src="https://user-images.githubusercontent.com/31703511/39668994-711a479c-509c-11e8-9e26-cdd2d740c933.png">
