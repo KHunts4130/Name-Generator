@@ -1,41 +1,41 @@
 
 // Variables
 
-var firstName = document.querySelector('.first-name');
-var nickName = document.querySelector('.nick-name');
-var lastName = document.querySelector('.last-name');
-var submitButton = document.querySelector('.submit-btn');
+var firstNameInput = document.querySelector('.first-name-input');
+var nickNameInput = document.querySelector('.nick-name-input');
+var lastNameInput = document.querySelector('.last-name-input');
+var submitButton = document.querySelector('.submit-button');
 var generatedName = document.querySelector('.generated-name');
 
 // event Listeners
 
-firstName.addEventListener('keyup', submitEnable);
-nickName.addEventListener('keyup', submitEnable);
-lastName.addEventListener('keyup', submitEnable);
+firstNameInput.addEventListener('keyup', submitEnable);
+nickNameInput.addEventListener('keyup', submitEnable);
+lastNameInput.addEventListener('keyup', submitEnable);
 submitButton.addEventListener('click', makeName);
 
 // functions
 
 function makeName() {
-  fullName = (firstName.value + " " + "'" + nickName.value + "'" + " " + lastName.value);
+  fullName = (firstNameInput.value + " " + "'" + nickNameInput.value + "'" + " " + lastNameInput.value);
   generatedName.innerHTML = (`
     <li contenteditable="true">Name: ${fullName}
     </li>
-    <button class="clear-btn">Clear</button>`);
-  var clearBtn = document.querySelector('.clear-btn');
-  clearBtn.addEventListener('click', reset);
+    <button class="clear-button">Clear</button>`);
+  var clearButton = document.querySelector('.clear-button');
+  clearButton.addEventListener('click', reset);
   clearInputFields();
 };
 
 function clearInputFields() {
-  firstName.value = '';
-  nickName.value = '';
-  lastName.value = '';
+  firstNameInput.value = '';
+  nickNameInput.value = '';
+  lastNameInput.value = '';
   submitButton.disabled = true;
 };
 
 function submitEnable() {
-  var inputLength = (firstName.value.length * nickName.value.length * lastName.value.length);
+  var inputLength = (firstNameInput.value.length * nickNameInput.value.length * lastNameInput.value.length);
   if (inputLength === 0) {
     submitButton.disabled = true;
   } else {

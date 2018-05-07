@@ -1,45 +1,45 @@
 
 // variables
 
-var $firstName = $('.first-name');
-var $nickName = $('.nick-name');
-var $lastName = $('.last-name');
-var $submit = $('.submit-btn');
+var $firstNameInput = $('.first-name-input');
+var $nickNameInput = $('.nick-name-input');
+var $lastNameInput = $('.last-name-input');
+var $submitButton = $('.submit-button');
 var $generatedName = $('.generated-name');
 
 // event listeners
 
-$firstName.on('keyup', submitenable);
-$nickName.on('keyup', submitenable);
-$lastName.on('keyup', submitenable);
-$submit.on('click', makeName);
+$firstNameInput.on('keyup', submitEnable);
+$nickNameInput.on('keyup', submitEnable);
+$lastNameInput.on('keyup', submitEnable);
+$submitButton.on('click', makeName);
 
 // functions
 
 function makeName() {
   
-  fullName = ($firstName.val() + " " + "'" + $nickName.val() + "'" + " " + $lastName.val());
+  fullName = ($firstNameInput.val() + " " + "'" + $nickNameInput.val() + "'" + " " + $lastNameInput.val());
   $generatedName.html (`
     <li contenteditable="true">Name: ${fullName}
     </li>
-    <button class="clear-btn">Clear</button>`);
-  var $clearbtn = $('.clear-btn');
-  $clearbtn.on('click', reset)
+    <button class="clear-button">Clear</button>`);
+  var $clearbutton = $('.clear-button');
+  $clearbutton.on('click', reset)
   clearInputFields();
 };
 
 function clearInputFields() {
-  $firstName.val('');
-  $nickName.val('');
-  $lastName.val('');
-  $submit.prop('disabled', true);
+  $firstNameInput.val('');
+  $nickNameInput.val('');
+  $lastNameInput.val('');
+  $submitButton.prop('disabled', true);
 };
 
-function submitenable() {
-  if ($firstName.val() && $nickName.val() && $lastName.val()) {
-    $submit.prop('disabled', false);
+function submitEnable() {
+  if ($firstNameInput.val() && $nickNameInput.val() && $lastNameInput.val()) {
+    $submitButton.prop('disabled', false);
   } else {
-    $submit.prop('disabled', true);
+    $submitButton.prop('disabled', true);
   };
 };
 
