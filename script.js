@@ -13,6 +13,7 @@ firstNameInput.addEventListener('keyup', submitEnable);
 nickNameInput.addEventListener('keyup', submitEnable);
 lastNameInput.addEventListener('keyup', submitEnable);
 submitButton.addEventListener('click', makeName);
+generatedName.addEventListener('click', reset);
 
 // functions
 
@@ -20,10 +21,7 @@ function makeName() {
   fullName = (firstNameInput.value + " " + "'" + nickNameInput.value + "'" + " " + lastNameInput.value);
   generatedName.innerHTML = (`
     <li contenteditable="true">Name: ${fullName}
-    </li>
-    <button class="clear-button">Clear</button>`);
-  var clearButton = document.querySelector('.clear-button');
-  clearButton.addEventListener('click', reset);
+    <button class="clear-button">Clear</button></li>`);
   clearInputFields();
 };
 
