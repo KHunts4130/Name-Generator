@@ -13,15 +13,15 @@ firstNameInput.addEventListener('keyup', submitEnable);
 nickNameInput.addEventListener('keyup', submitEnable);
 lastNameInput.addEventListener('keyup', submitEnable);
 submitButton.addEventListener('click', makeName);
-generatedName.addEventListener('click', reset);
 
 // functions
 
 function makeName() {
   fullName = (firstNameInput.value + " " + "'" + nickNameInput.value + "'" + " " + lastNameInput.value);
   generatedName.innerHTML = (`
-    <li contenteditable="true">Name: ${fullName}
-    <button class="clear-button">Clear</button></li>`);
+    <li contenteditable>Name: ${fullName}</li>
+    <button class="clear-button">Clear</button>`);
+  generatedName.addEventListener('click', reset);
   clearInputFields();
 };
 
