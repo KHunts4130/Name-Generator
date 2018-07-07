@@ -13,6 +13,7 @@ $firstNameInput.on('keyup', submitEnable);
 $nickNameInput.on('keyup', submitEnable);
 $lastNameInput.on('keyup', submitEnable);
 $submitButton.on('click', makeName);
+$generatedName.on('click', 'li .clear-button', reset);
 
 // functions
 
@@ -21,7 +22,6 @@ function makeName() {
   $generatedName.html (`
     <li contenteditable="true">Name: ${fullName}
     <button class="clear-button">Clear</button></li>`);
-    $generatedName.on('click', 'li .clear-button', reset);
   clearInputFields();
 };
 
